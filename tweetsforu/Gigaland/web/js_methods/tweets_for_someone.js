@@ -49,8 +49,7 @@ function creat_tweet_box(tweet_info){
         img_url = tweet_info.entities.media[0].media_url
         link = tweet_info.entities.media[0].url
     }else{
-
-        img_url = tweet_info.user.profile_image_url
+        img_url = "images/tweetsforu/default_twt.png"
         link = "https://twitter.com/"+tweet_info.user.screen_name+"/status/"+tweet_info.id_str
     }
     profit = "profit"
@@ -83,6 +82,12 @@ function creat_tweet_box(tweet_info){
         "\n" +
         "    </div>"
 
+    twt_text = tweet_info.text_CN
+    if(tweet_info.text_CN.length === 0){
+        twt_text = tweet_info.text
+    }
+
+
     tweet_box = "\t\t\t\t\t\t<div class=\"col-lg-4 col-md-6 mb30\">\n" +
         "                    \t\t\t\t\t\t\t<div class=\"bloglist item\">\n" +
         "                                                        <div class=\"post-content\">\n" +
@@ -91,7 +96,7 @@ function creat_tweet_box(tweet_info){
         "                                                            </div>\n" +
         "                                                            <div class=\"post-text\">\n"+
         "                                                                <span class=\"p-date\">"+date+"</span>\n" +
-        "                                                                <p>"+tweet_info.text_CN+"</p>\n" +
+        "                                                                <p>"+twt_text+"</p>\n" +
         "                                                                <a class=\"btn-main\" href=\""+link+"\">twitter</a>\n" +
                                                                             bottom_bar+
         "                                                            </div>\n" +

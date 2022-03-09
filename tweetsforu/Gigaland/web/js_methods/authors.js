@@ -104,7 +104,7 @@ function create_cards_list(data){
             "\t\t\t\t\t\t\t<div class=\"bloglist item\">\n" +
             "                                    <div class=\"post-content\">\n" +
             "                                        <div class=\"post-image\">\n" +
-            "                                            <img alt=\"\" src=\""+rowCells.profile_image_url+"\" class=\"lazy\">\n" +
+            "                                            <img alt=\"\" name = "+rowCells.screen_name+" src=\""+"images/authorProfile/"+rowCells.screen_name+".png"+"\" class=\"lazy\" onclick='search_tweets(this.name)' >\n" +
             "                                        </div>\n" +
             "                                        <div class=\"post-text\">\n" +
             "                                            <h4><a href=\"#\">"+rowCells.screen_name+"<span></span></a></h4>\n" +
