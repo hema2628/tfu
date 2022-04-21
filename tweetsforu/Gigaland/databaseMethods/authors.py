@@ -17,4 +17,5 @@ class Authors(Enum):
     Loopifyyy = 'Loopifyyy'
     flurnft = 'flurnft'
     rarible = 'rarible'
+    garyvee = 'garyvee'
 

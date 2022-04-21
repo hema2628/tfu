@@ -89,7 +89,6 @@ def insert_new(authorname):
             i["loss"] = random.randint(0,100)
             insert_one(authorname,i)
             print("new tweet inserted")
-            print("created at: "+i["created_at"])
 
     return res
 

@@ -40,21 +40,16 @@ function getJsonObject(path, success, error) {
 eel.expose(search_tweets)
 function search_tweets(value){
 
-
-    // values = value.split(',');
-    // author_name = values[0];
-    // author_id = values[1];
-
-
-    // getJsonObject('../../tweet_connecter/web/tweetCollection/'+author_id+'.json',
-    //     function (data){
-    //
-    //         creat_tweet_list(data,author_name,author_id);
-    //     },
-    //     function(xhr) { console.error(xhr); })
-
     eel.tweet_getter_by_Id(value)
     window.open('tweets_for_someone.html?authorid='+value,'_blank')
+
+}
+
+eel.expose(search_tweets)
+function search_tweeter_nft_flows(value){
+
+    eel.tweet_getter_by_Id(value)
+    window.open('tweeter_flow.html?authorid='+value,'_blank')
 
 }
 
@@ -110,6 +105,7 @@ function create_cards_list(data){
             "                                            <h4><a href=\"#\">"+rowCells.screen_name+"<span></span></a></h4>\n" +
             "                                            <p>"+rowCells.description+"</p>\n" +
             "                                            <a class=\"btn-main\" href='#' name='"+rowCells["screen_name"]+"' onclick='search_tweets(this.name)'>Tweets</a >\n" +
+            "                                            <a class=\"btn-main\" href='#' name='"+rowCells["screen_name"]+"' onclick='search_tweeter_nft_flows(this.name)'>NFT Flows</a >\n" +
             "                                        </div>\n" +
             "                                    </div>\n" +
             "                                </div>\n" +

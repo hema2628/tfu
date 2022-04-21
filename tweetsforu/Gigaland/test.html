@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+            type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alch/alchemy-web3@latest/dist/alchemyWeb3.min.js"></script>
+
+    <script >
+
+        function jump(){
+            // method 1
+            // const Http = new XMLHttpRequest();
+            // const url='http://api.etherscan.io/api?module=contract&action=getabi&address=0xfb6916095ca1df60bb79ce92ce3ea74c37c5d359';
+            // Http.open("GET", url);
+            // Http.send();
+            //
+            // Http.onreadystatechange = (e) => {
+            //     console.log(Http.responseText)
+            // }
+
+            //method 2
+
+            let address;
+            address = "0xfb6916095ca1df60bb79ce92ce3ea74c37c5d359"
+
+            const Url='http://api.etherscan.io/api?module=contract&action=getabi&address='+address;
+            $.ajax({
+                url: Url,
+                type:"GET",
+                success:function (result) {
+                    console.log(result.status)
+                    console.log(result.message)
+
+                },
+                error:function (error) {
+                    console.log('Error ${error}')
+
+                }
+
+            })
+
+        }
+
+
+
+        function get_recent_trans(){
+            address = '0xc6b0562605D35eE710138402B878ffe6F2E23807'
+            apiket = 'Y88VHE98RE86VAU5IUEGAYTBHHC39YXY1B'
+            // const Url = "https://api.etherscan.io/api?module=account&action=txlist&address="+address+"&apikey="+apiket
+
+            const Url = "https://api.etherscan.io/api?module=account&action=tokennfttx&address=" + address +
+                "&page=1&offset=10&startblock=0&endblock=27025780&sort=asc&apikey=" + apiket
+
+// Using ethers.js
+            $.ajax({
+                url: Url,
+                type:"GET",
+                success:function (result) {
+                    console.log(result)
+
+                },
+                error:function (error) {
+                    console.log(error)
+
+                }
+
+            })
+        }
+
+
+        // Installation: https://github.com/alchemyplatform/alchemy-web3
+        // const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
+        async function getnft(contractaddress) {
+            // Using HTTPS
+            const web3 = AlchemyWeb3.createAlchemyWeb3("https://eth-mainnet.g.alchemy.com/v2/l8sVYLAluoIt6ZhOvnyTerWmoO2n5J1h");
+
+            const metadata = await web3.alchemy.getTokenMetadata("0x1985365e9f78359a9B6AD760e32412f4a445E862")
+
+            console.log("TOKEN METADATA->");
+            console.log(metadata);
+        }
+
+
+        function test(){
+            const Url = "https://app.cyberconnect.me/address/0x42B44E52b4Fd2dc199048B61c94E19EBec7DBD14"
+
+// Using ethers.js
+            $.ajax({
+                url: Url,
+                type:"GET",
+                success:function (result) {
+                    console.log(result)
+
+                },
+                error:function (error) {
+                    console.log(error)
+
+                }
+
+            })
+        }
+
+        function owners(){
+            const  url = "https://eth-mainnet.g.alchemy.com/v2/demo/getOwnersForToken?contractAddress=0x04b14e3383d42685ae16af3c47b21b2d5941d27e&tokenId=867"
+            $.ajax({
+                url: url,
+                type:"GET",
+                success:function (result) {
+                    console.log(result)
+
+                },
+                error:function (error) {
+                    console.log(error)
+
+                }
+
+            })
+        }
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <button id="li-escan" onclick="jump()">login in to etherscan</button>
+
+    <button id="li-ether" onclick="ether()">ether_test</button>
+
+    <button id="getnft" onclick="getnft()">ether_test</button>
+
+    <button onclick="test()">test</button>
+
+    <button onclick="owners()">token owners</button>
+
+
+</body>
+</html>

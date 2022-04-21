@@ -30,7 +30,7 @@ function creat_tweet_list(data){
 
     for (var i = 0; i<tweetsOBJ.length; i++){
 
-        tweets += creat_tweet_box(tweetsOBJ[i],);
+        tweets += creat_tweet_box(tweetsOBJ[i]);
     }
 
 

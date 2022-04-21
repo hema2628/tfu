@@ -66,6 +66,7 @@ def create_author_database():
         else:
             try:
                 info = api.get_user(screen_name = i.value)
+                info['address'] = ""
                 print(info)
                 tweetersinfo.insert_one(info)
             except:

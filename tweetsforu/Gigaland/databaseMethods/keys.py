@@ -1,10 +1,10 @@
-API_key = "ywGifLL8EINaRtRM6ofrAzffE"
-API_key_secret = "1cnt8jzu8DjdC8AfZX6hF2mqKAViYTZ5CtXSBUFfDl33kTogE9"
+API_key = "noNx43jZldg91BsWppBeX1ZFr"
+API_key_secret = "IxPVTx5mT6JFjWbiTl6EBJX1SCefflNGKCPnF4DP708ovo02Bw"
 
-Access_token = "1485912942856249351-h2EBxHw2ICkyYuoPtRk6KFLaiUWTpw"
-Access_token_secret = "M9aljCQBQI7mpyKemjKOlEqYi6mWHPGoYOHE3ogBZSVOZ"
+Access_token = "1485912942856249351-9sAilZJ6IydYGaVu7bM4mDGUDcuKYU"
+Access_token_secret = "vM9GdEFETOCRDtNTiZ74tfPHx1sJNytt4DVkCLYpuWKTa"
 
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAPcuZAEAAAAAlwq41ZL80OAOKGdU5uT0%2F4JjiNI%3DHAbPuOMLU8b1GMvRnwlOmfFCjI7cZPt4cqyVpQWRg5wRyIcYmh"
+bearer_token = "AAAAAAAAAAAAAAAAAAAAAPcuZAEAAAAAwHOaE%2FkWbGlv8%2B9cuTCq%2BInZWO0%3DOD2IvPkngU4ekdozBvuDDta7uLY1tWjt8R4vYZJRZ1wxgIUvIg"
 
 clientid = "eFozQ0xWaEc2dGhxdmI5dTlHMDM6MTpjaQ"
 clientsecret = "EmxnZG1eA3wcslhVK6MYo7QhoxpzeZ4_aFwWsj2vrU1l2UDb8F"
