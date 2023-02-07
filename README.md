@@ -11,6 +11,6 @@
    
    pip install googletrans==4.0.0-rc1
    
-2. 首先运行Gigaland/databaseMethods/DBMethods_authorinfo.py来获取tweeter列表并建立和更新数据库
-3. 运行Gigaland/databaseMethods/databaseCreation.py来获取用户推文信息并建立数据库 该程序持续运行，会每间隔五分钟更新一次数据库
-4. 运行Gigaland/startwebsite.py打开网页 
+2. Firstly, run "Gigaland/databaseMethods/DBMethods_authorinfo.py" to get tweeter list and establish/update database.
+3. Run "Gigaland/databaseMethods/databaseCreation.py" to get user tweets and establish database. This process will keep working and refresh database every 5 minutes.
+4. Run "Gigaland/startwebsite.py" to open website.
